@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Rep Counter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI Rep Counter</h1>
+
+    <div class="video-container">
+      <video id="video" width="640" height="480" autoplay muted></video>
+      <canvas id="canvas" width="640" height="480"></canvas>
+    </div>
+
+    <div class="controls">
+      <select id="exerciseSelect">
+        <option value="squats">Squats</option>
+        <option value="pushups">Push-ups</option>
+        <option value="bicep-curls">Bicep Curls</option>
+        <option value="situps">Sit-ups</option>
+      </select>
+      <button id="startBtn">Start Camera</button>
+      <button id="logBtn" disabled>Log Workout</button>
+    </div>
+
+    <div class="counter">
+      <h2>Reps: <span id="repCount">0</span></h2>
+      <p id="feedback">Start the camera and begin your exercise.</p>
+    </div>
+
+    <div id="historySection">
+      <h3>Workout History</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ @tensorflow/tfjs@4.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ @tensorflow-models/movenet@1.0.5"></script>
+  <script src="script.js"></script>
+</body>
+</html>
