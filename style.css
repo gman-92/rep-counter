@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  display: inline-block;
+  border: 3px solid #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#video, #canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#canvas {
+  pointer-events: none;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.counter {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+#feedback {
+  margin-top: 10px;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+#historySection {
+  margin-top: 30px;
+  text-align: left;
+}
+
+#historyList {
+  list-style: none;
+}
+
+#historyList li {
+  padding: 10px;
+  background: white;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
